@@ -1,0 +1,9 @@
+.list-messages {
+    padding: 0 38px;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-image: url('../../../public/assets/img/endless-constellation.svg');
+}

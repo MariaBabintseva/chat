@@ -1,0 +1,17 @@
+.chat {
+    height: 100vh;
+}
+
+.entry-field {
+    background-color: #fafafa;
+    height: 70px;
+    padding: 10px 8px 10px 20px;
+    border-top: 1px solid #b0b0b0;
+}
+
+.btn-primary.btn-send,
+.btn-primary.btn-send:active {
+    background-color: transparent;
+    border: none;
+    color: #808080;
+}

@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import { FormRegistration } from './components/FormRegistration/FormRegistration';
+import { Chat } from './components/Chat/Chat';
 
 function App() {
+  const [user, setUser] = useState(sessionStorage.getItem('user') ? JSON.parse(sessionStorage.getItem('user')) : '')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className='vh-100'>
+      {user
+        ? <Chat />
+        : <FormRegistration setUser={setUser} />
+      }
+    </Container>
   );
 }
 
